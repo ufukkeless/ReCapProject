@@ -1,4 +1,4 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,7 +16,7 @@ namespace Entities.Concrete
         //Model yılı
         public int ModelYear { get; set; }
         //Güncel fiyatı
-        public decimal DailyPrice { get; set; }
+        public int DailyPrice { get; set; }
         //Tanım-açıklama
         public string Description { get; set; }
     }
