@@ -11,12 +11,23 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             //CarTest();
-            //Console.WriteLine("---------------------");
             //BrandTest();
-            //Console.WriteLine("---------------------");
             //ColorTest();
-            //Console.WriteLine("---------------------");
             //CarDetailTest();
+            //CustomerTest();
+            //RentalTest();
+        }
+
+        private static void RentalTest()
+        {
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            rentalManager.Add(new Rental { CarId = 1, CustomerId = 1, RentDate = new DateTime(2021, 12, 07), ReturnDate = new DateTime(2021, 12, 13) });
+        }
+
+        private static void CustomerTest()
+        {
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            customerManager.Add(new Customer { UserId = 1, CompanyName = "Tutsoy Holding" });
         }
 
         private static void CarDetailTest()
